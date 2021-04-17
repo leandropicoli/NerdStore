@@ -1,9 +1,5 @@
 ﻿using NerdStore.Core.DomainObjects;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NerdStore.Catalog.Domain
 {
@@ -18,6 +14,8 @@ namespace NerdStore.Catalog.Domain
             Value = value;
             RegisterDate = registerDate;
             Image = image;
+
+            Validate();
         }
 
         public Guid CategoryId { get; private set; }
@@ -42,12 +40,14 @@ namespace NerdStore.Catalog.Domain
 
         public void ChangeDescription(string description)
         {
+            AssertionConcern.AssertArgumentNotEmpty(description, "O campo Descricao do produto não pode estar vazio");
             Description = description;
         }
 
         public void DecreaseInventory(int amount)
         {
             if (amount < 0) amount *= -1;
+            if (!HasInventory(amount)) throw new DomainException("Estoque insuficiente");
             InventoryAmount -= amount;
         }
 
@@ -63,24 +63,11 @@ namespace NerdStore.Catalog.Domain
 
         public void Validate()
         {
-
-        }
-    }
-
-    public class Category : Entity
-    {
-        public Category(string name, int code)
-        {
-            Name = name;
-            Code = code;
-        }
-
-        public string Name { get; private set; }
-        public int Code { get; private set; }
-
-        public override string ToString()
-        {
-            return $"{Name} - {Code}";
+            AssertionConcern.AssertArgumentNotEmpty(Name, "O campo Nome do produto não pode estar vazio");
+            AssertionConcern.AssertArgumentNotEmpty(Description, "O campo Descricao do produto não pode estar vazio");
+            AssertionConcern.AssertArgumentEquals(CategoryId, Guid.Empty, "O campo CategoriaId do produto não pode estar vazio");
+            AssertionConcern.AssertArgumentLowerThan(Value, 1, "O campo Valor do produto não pode se menor igual a 0");
+            AssertionConcern.AssertArgumentNotEmpty(Image, "O campo Imagem do produto não pode estar vazio");
         }
     }
 }
