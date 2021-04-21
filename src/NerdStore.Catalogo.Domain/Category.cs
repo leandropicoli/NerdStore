@@ -1,4 +1,5 @@
 ﻿using NerdStore.Core.DomainObjects;
+using System.Collections.Generic;
 
 namespace NerdStore.Catalog.Domain
 {
@@ -14,7 +15,8 @@ namespace NerdStore.Catalog.Domain
 
         public string Name { get; private set; }
         public int Code { get; private set; }
-
+        public ICollection<Product> Products { get; set; }
+        protected Category() { }
         public override string ToString()
         {
             return $"{Name} - {Code}";

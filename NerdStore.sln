@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NerdStore.Catalog.Domain", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D68429E7-D39B-4072-A241-17724B43C65D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NerdStore.Catalog.Domain.Tests", "tests\NerdStore.Catalog.Domain.Tests\NerdStore.Catalog.Domain.Tests.csproj", "{E226AAEE-2956-4263-9002-45DA659C28AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NerdStore.Catalog.Domain.Tests", "tests\NerdStore.Catalog.Domain.Tests\NerdStore.Catalog.Domain.Tests.csproj", "{E226AAEE-2956-4263-9002-45DA659C28AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NerdStore.Catalog.Data", "src\NerdStore.Catalog.Data\NerdStore.Catalog.Data.csproj", "{AA320A85-52BD-43DB-94D4-77020482AD95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{E226AAEE-2956-4263-9002-45DA659C28AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E226AAEE-2956-4263-9002-45DA659C28AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E226AAEE-2956-4263-9002-45DA659C28AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA320A85-52BD-43DB-94D4-77020482AD95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA320A85-52BD-43DB-94D4-77020482AD95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA320A85-52BD-43DB-94D4-77020482AD95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA320A85-52BD-43DB-94D4-77020482AD95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{CBEC0993-37E6-4366-A47A-BD3405F18466} = {1D067765-4EE0-4EC3-94EB-1C2718E04777}
 		{D68429E7-D39B-4072-A241-17724B43C65D} = {1D067765-4EE0-4EC3-94EB-1C2718E04777}
 		{E226AAEE-2956-4263-9002-45DA659C28AE} = {D68429E7-D39B-4072-A241-17724B43C65D}
+		{AA320A85-52BD-43DB-94D4-77020482AD95} = {1D067765-4EE0-4EC3-94EB-1C2718E04777}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8A9B10F7-415C-4D17-9C35-7288BF67CAE5}
