@@ -6,10 +6,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Compile Remove="Class1.cs" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\NerdStore.Catalog.Data\NerdStore.Catalog.Data.csproj" />
       <ProjectReference Include="..\NerdStore.Catalogo.Domain\NerdStore.Catalog.Domain.csproj" />
     </ItemGroup>
