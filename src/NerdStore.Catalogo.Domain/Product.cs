@@ -1,5 +1,6 @@
 ﻿using NerdStore.Core.DomainObjects;
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NerdStore.Catalog.Domain
 {
@@ -19,11 +20,17 @@ namespace NerdStore.Catalog.Domain
             Validate();
         }
 
+        protected Product()
+        {
+            
+        }
+
         public Guid CategoryId { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
         public bool Active { get; private set; }
 
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Value { get; private set; }
         public DateTime RegisterDate { get; private set; }
         public string Image { get; private set; }
