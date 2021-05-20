@@ -4,6 +4,7 @@ using NerdStore.Catalog.Data;
 using NerdStore.Catalog.Data.Repository;
 using NerdStore.Catalog.Domain;
 using NerdStore.Core.Bus;
+using NerdStore.WebApp.MVC.Data;
 
 namespace NerdStore.WebApp.MVC.Setup
 {
@@ -19,7 +20,6 @@ namespace NerdStore.WebApp.MVC.Setup
             services.AddScoped<IProductAppService, ProductAppService>();
             services.AddScoped<IInventoryService, InventoryService>();
             services.AddScoped<CatalogContext>();
-            
         }
     }
 }

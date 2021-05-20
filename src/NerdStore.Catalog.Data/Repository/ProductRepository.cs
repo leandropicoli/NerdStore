@@ -42,7 +42,7 @@ namespace NerdStore.Catalog.Data.Repository
 
         public async Task<Product> GetById(Guid id)
         {
-            return await _context.Products.FindAsync(id);
+            return await _context.Products.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<IEnumerable<Category>> GetCategories()

@@ -25,4 +25,8 @@
       <ProjectReference Include="..\NerdStore.Core\NerdStore.Core.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="Views\AdminProducts\Index.cshtml.cs" />
+    </ItemGroup>
+
 </Project>
