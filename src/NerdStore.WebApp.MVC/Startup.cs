@@ -77,7 +77,7 @@ namespace NerdStore.WebApp.MVC
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Showcase}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }
