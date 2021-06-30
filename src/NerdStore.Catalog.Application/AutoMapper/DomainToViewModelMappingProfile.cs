@@ -1,4 +1,4 @@
-using AutoMapper;
+﻿using AutoMapper;
 using NerdStore.Catalog.Application.ViewModel;
 using NerdStore.Catalog.Domain;
 
